@@ -4,7 +4,9 @@ import Footer from './Components/Footer';
 import SearchBus from './Components/SearchBus';
 
 
+
 function App() {
+
   return (
     <div>
     
@@ -12,9 +14,11 @@ function App() {
     <Header></Header>
     <Footer></Footer>
     <SearchBus></SearchBus>
+    
     </div>
     </div>
   );
 }
 
 export default App;
+

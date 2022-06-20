@@ -1,7 +1,11 @@
 import React, { Component} from 'react';
-
+import Products from './Products';
+import data from './data.json';
+import Record from "../Data.json";
 export default class SearchBus extends React.Component {
     render(){
+      console.log(data);
+      const products = data;
         return (
             <main id="content">
             {/*Introduction*/}
@@ -79,13 +83,13 @@ export default class SearchBus extends React.Component {
               </div>
             </section>
             {/*End of Introduction*/}
-            <form className="row text-center clearfix w3-container w3-card-4 scrollto">
+            <form className="row text-center clearfix w3-container w3-card-4 scrollto" id="datve">
               <div className="section-heading">
                 <h2 className="section-title">Vui lòng đặt vé cho chuyến đi của bạn</h2>
               </div>
               <div>
                 <input className="w3-radio" type="radio" name="gender" defaultValue="male" defaultChecked />
-                <label>Một chiều</label>
+                <label>Một chiều</label><br></br>
                 <input className="w3-radio" type="radio" name="gender" defaultValue="female" />
                 <label>Khứ hồi</label>
               </div>
@@ -95,9 +99,13 @@ export default class SearchBus extends React.Component {
                 {/* <input class="w3-input w3-border" type="text" placeholder="Điểm đi"> */}
                 <select className="w3-select w3-border" name="option">
                   <option value disabled selected>Điểm đi</option>
-                  <option value={1}>Option 1</option>
-                  <option value={2}>Option 2</option>
-                  <option value={3}>Option 3</option>
+                 {
+                    Record.map(record =>{
+                        return(
+                            <option>{record.name}</option>
+                        )
+                    })
+                 }
                 </select>
               </div>
               <div className="w3-half">
@@ -105,9 +113,14 @@ export default class SearchBus extends React.Component {
                 {/* <input class="w3-input w3-border" type="text" placeholder="Điểm đến"> */}
                 <select className="w3-select w3-border" name="option">
                   <option value disabled selected>Điểm đến</option>
-                  <option value={1}>Option 1</option>
-                  <option value={2}>Option 2</option>
-                  <option value={3}>Option 3</option>
+                  {
+                    Record.map(record =>{
+                        return(
+                            <option>{record.name}</option>
+                        )
+                    })
+                 }
+                  
                 </select>
               </div>
               <div className="w3-half">
@@ -116,7 +129,7 @@ export default class SearchBus extends React.Component {
               </div>
               <div className="w3-half">
                 <label>Ngày đến</label>
-                <input className="w3-input w3-border" type="text" placeholder="Ngày đến" />
+                <input className="w3-input w3-border" type="date" placeholder="Ngày đến" />
               </div>
             </form>
             {/*Gallery*/}
@@ -127,6 +140,20 @@ export default class SearchBus extends React.Component {
     
                 </aside> */}
             {/*End of Gallery*/}
+            {/*End of Clients*/}
+            {/*Pricing Tables*/}
+            <section id="pricing" className="secondary-color text-center scrollto clearfix ">
+              <div className="row clearfix">
+                <div className="section-heading">
+                  <h3>Sự lựa chọn hàng đầu cho bạn</h3>
+                  <h2 className="section-title">Các chuyến xe nổi bật</h2>
+                </div>
+                {products.map(product =>
+    <Products tuyen={product.tuyen} km={product.km} gio={product.gio} giatien={product.giatien}></Products>
+      )}
+              </div>
+            </section>
+            {/*End of Pricing Tables*/}
             {/*Content Section*/}
             <div id="services" className="scrollto clearfix">
               <div className="row no-padding-bottom clearfix">
@@ -263,77 +290,7 @@ export default class SearchBus extends React.Component {
                 </div>
               </div>
             </section>
-            {/*End of Clients*/}
-            {/*Pricing Tables*/}
-            <section id="pricing" className="secondary-color text-center scrollto clearfix ">
-              <div className="row clearfix">
-                <div className="section-heading">
-                  <h3>Sự lựa chọn hàng đầu cho bạn</h3>
-                  <h2 className="section-title">Các chuyến xe nổi bật</h2>
-                </div>
-                {/*Pricing Block*/}
-                <div className="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
-                  <div className="pricing-block-content">
-                    <h3>Sài gòn đến Hồ Chí Minh</h3>
-                    <p className="pricing-sub">The standard version</p>
-                    <div className="pricing">
-                      <div className="price"><span>$</span>250</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    </div>
-                    <ul>
-                      <li>5 Downloads</li>
-                      <li>2 Extensions</li>
-                      <li>Tutorials</li>
-                      <li>Forum Support</li>
-                      <li>1 year free updates</li>
-                    </ul>
-                    <a href="#" className="button">BUY TODAY</a>
-                  </div>
-                </div>
-                {/*End Pricing Block*/}
-                {/*Pricing Block*/}
-                <div className="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.6s">
-                  <div className="pricing-block-content">
-                    <h3>Student</h3>
-                    <p className="pricing-sub">Most popular choice</p>
-                    <div className="pricing">
-                      <div className="price"><span>$</span>29</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    </div>
-                    <ul>
-                      <li>15 Downloads</li>
-                      <li>5 Extensions</li>
-                      <li>Tutorials with Files</li>
-                      <li>Forum Support</li>
-                      <li>2 years free updates</li>
-                    </ul>
-                    <a href="#" className="button">BUY TODAY</a>
-                  </div>
-                </div>
-                {/*End Pricing Block*/}
-                {/*Pricing Block*/}
-                <div className="pricing-block col-3 wow fadeInUp" data-wow-delay="0.8s">
-                  <div className="pricing-block-content">
-                    <h3>Business</h3>
-                    <p className="pricing-sub">For the whole team</p>
-                    <div className="pricing">
-                      <div className="price"><span>$</span>49</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    </div>
-                    <ul>
-                      <li>Unlimited Downloads</li>
-                      <li>Unlimited Extensions</li>
-                      <li>HD Video Tutorials</li>
-                      <li>Chat Support</li>
-                      <li>Lifetime free updates</li>
-                    </ul>
-                    <a href="#" className="button">BUY TODAY</a>
-                  </div>
-                </div>
-                {/*End Pricing Block*/}
-              </div>
-            </section>
-            {/*End of Pricing Tables*/}
+            
           </main>
         )
     }

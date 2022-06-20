@@ -1,0 +1,49 @@
+﻿ [{
+		"tuyen": "SÀI GÒN ⇒ ĐÀ LẠT",
+		"km": "310km",
+		"gio": "8h",
+		"giatien": "280.000đ"
+	},
+	{
+		"tuyen": "SÀI GÒN ⇒ NHA TRANG",
+		"km": "450km",
+		"gio": "9h",
+		"giatien": "235.000đ"
+	},
+	{
+		"tuyen": "SÀI GÒN ⇒ ĐÀ NẴNG",
+		"km": "980km",
+		"gio": "20h",
+		"giatien": "390.000đ"
+	},
+	{
+		"tuyen": "SÀI GÒN ⇒ CẦN THƠ",
+		"km": "190km",
+		"gio": "4h",
+		"giatien": "160.000đ"
+	},
+	{
+		"tuyen": "ĐÀ NẴNG ⇒ HÀ NỘI",
+		"km": "745km",
+		"gio": "18h",
+		"giatien": "355.000đ"
+	},
+	{
+		"tuyen": "SÀI GÒN ⇒ RẠCH GIÁ",
+		"km": "235km",
+		"gio": "5h",
+		"giatien": "180.000đ"
+	},
+	{
+		"tuyen": "SÀI GÒN ⇒ CHÂU ĐỐC",
+		"km": "240km",
+		"gio": "6h",
+		"giatien": "165.000đ"
+	},
+	{
+		"tuyen": "SÀI GÒN ⇒ CÀ MAU",
+		"km": "357km",
+		"gio": "8h",
+		"giatien": "220.000đ"
+	}
+]
